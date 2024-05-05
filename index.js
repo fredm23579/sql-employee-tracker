@@ -3,52 +3,52 @@ const cTable = require('console.table');
 const { getAllDepartments, getAllRoles, getAllEmployees, addDepartment, addRole, addEmployee, updateEmployeeRole } = require('./lib/queries');
 
 async function main() {
-    const { action } = await inquirer.prompt([
-        {
-            type: 'list',
-            name: 'action',
-            message: 'What would you like to do?',
-            choices: [
-                'View all departments',
-                'View all roles',
-                'View all employees',
-                'Add a department',
-                'Add a role',
-                'Add an employee',
-                'Update an employee role',
-                'Exit'
-            ]
+    while (true) {
+        const { action } = await inquirer.prompt([
+            {
+                type: 'list',
+                name: 'action',
+                message: 'What would you like to do?',
+                choices: [
+                    'View all departments',
+                    'View all roles',
+                    'View all employees',
+                    'Add a department',
+                    'Add a role',
+                    'Add an employee',
+                    'Update an employee role',
+                    'Exit'
+                ]
+            }
+        ]);
+
+        switch (action) {
+            case 'View all departments':
+                await viewAllDepartments();
+                break;
+            case 'View all roles':
+                await viewAllRoles();
+                break;
+            case 'View all employees':
+                await viewAllEmployees();
+                break;
+            case 'Add a department':
+                await addDepartmentPrompt();
+                break;
+            case 'Add a role':
+                await addRolePrompt();
+                break;
+            case 'Add an employee':
+                await addEmployeePrompt();
+                break;
+            case 'Update an employee role':
+                await updateEmployeeRolePrompt();
+                break;
+            case 'Exit':
+                console.log('Exiting application...');
+                return;
         }
-    ]);
-
-    switch (action) {
-        case 'View all departments':
-            await viewAllDepartments();
-            break;
-        case 'View all roles':
-            await viewAllRoles();
-            break;
-        case 'View all employees':
-            await viewAllEmployees();
-            break;
-        case 'Add a department':
-            await addDepartmentPrompt();
-            break;
-        case 'Add a role':
-            await addRolePrompt();
-            break;
-        case 'Add an employee':
-            await addEmployeePrompt();
-            break;
-        case 'Update an employee role':
-            await updateEmployeeRolePrompt();
-            break;
-        case 'Exit':
-            console.log('Exiting application...');
-            return;
     }
-
-    main();
 }
 
 async function viewAllDepartments() {
@@ -59,6 +59,7 @@ async function viewAllDepartments() {
     } catch (error) {
         console.error('Error retrieving departments:', error.message);
     }
+    main();
 }
 
 async function viewAllRoles() {
@@ -69,6 +70,7 @@ async function viewAllRoles() {
     } catch (error) {
         console.error('Error retrieving roles:', error.message);
     }
+    main();
 }
 
 async function viewAllEmployees() {
@@ -79,6 +81,7 @@ async function viewAllEmployees() {
     } catch (error) {
         console.error('Error retrieving employees:', error.message);
     }
+    main();
 }
 
 async function addDepartmentPrompt() {
@@ -95,6 +98,7 @@ async function addDepartmentPrompt() {
     } catch (error) {
         console.error('Error adding department:', error.message);
     }
+    main();
 }
 
 async function addRolePrompt() {
@@ -128,6 +132,7 @@ async function addRolePrompt() {
     } catch (error) {
         console.error('Error adding role:', error.message);
     }
+    main();
 }
 
 async function addEmployeePrompt() {
@@ -179,6 +184,7 @@ async function addEmployeePrompt() {
     } catch (error) {
         console.error('Error adding employee:', error.message);
     }
+    main();
 }
 
 async function updateEmployeeRolePrompt() {
@@ -214,6 +220,7 @@ async function updateEmployeeRolePrompt() {
     } catch (error) {
         console.error('Error updating employee role:', error.message);
     }
+    main();
 }
 
 main();
