@@ -13,8 +13,9 @@
   ],
   "author": "Fred Motta",
   "license": "MIT",
-  "dependencies": {
+"dependencies": {
     "mysql2": "^2.3.0",
-    "inquirer": "^8.2.4"
-  }
+    "inquirer": "^8.2.4",
+    "dotenv": "^10.0.0"
+}
 }
