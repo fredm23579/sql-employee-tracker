@@ -1,6 +1,10 @@
 # Node modules
 node_modules/
+
+#other files
 package-lock.json
+.gitignore
+.git --recursive 
 
 # Environment variables
 .env
