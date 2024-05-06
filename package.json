@@ -1,22 +1,21 @@
 {
-  "name": "sql-employee-tracker",
-  "version": "1.0.0",
-  "description": "A command-line application to manage a company's employee database",
-  "main": "index.js",
-  "scripts": {
-    "start": "node index.js"
+  "author": "Fred Motta",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "figlet": "^1.7.0",
+    "inquirer": "^8.2.4",
+    "mysql2": "^2.3.0"
   },
+  "description": "A command-line application to manage a company's employee database",
   "keywords": [
     "node",
     "mysql",
     "inquirer"
   ],
-  "author": "Fred Motta",
   "license": "MIT",
-  "dependencies": {
-    "console.table": "^0.10.0",
-    "dotenv": "^10.0.0",
-    "inquirer": "^8.2.4",
-    "mysql2": "^2.3.0"
-  }
+  "main": "index.js",
+  "name": "sql-employee-tracker",
+  "version": "1.0.0"
 }

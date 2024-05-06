@@ -1,0 +1,5 @@
+{
+    "debug.saveBeforeStart": "none",
+    "scm.autoReveal": false,
+    "css.completion.triggerPropertyValueCompletion": false
+}

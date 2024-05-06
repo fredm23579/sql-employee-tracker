@@ -114,6 +114,3 @@ DB_PASSWORD=your_password
 
 That's it! With these steps, you should be able to get started with this Node.js project and start managing your company's employee database.
 
----
-
-Generated with ❤️ by [ReadMeAI](https://www.readmeai.co/).

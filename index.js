@@ -1,8 +1,26 @@
 const inquirer = require('inquirer');
 const cTable = require('console.table');
 const { getAllDepartments, getAllRoles, getAllEmployees, addDepartment, addRole, addEmployee, updateEmployeeRole } = require('./lib/queries');
+const figlet = require('figlet');
+
 
 async function main() {
+    
+    console.log('\n');
+    console.log(figlet.textSync('Employee Tracker', {
+        font: 'Standard',
+        horizontalLayout: 'default',
+        verticalLayout: 'default'
+    }));
+    console.log('\n');
+    console.log('Welcome to the Employee Tracker!');
+    console.log('\n');
+    console.log('Use the arrow keys to navigate the menu.');
+    console.log('\n');
+    console.log('Press Enter to select an option.');
+    console.log('\n');
+
+    
     while (true) {
         const { action } = await inquirer.prompt([
             {
