@@ -4,7 +4,8 @@ node_modules/
 #other files
 package-lock.json
 .gitignore
-.git --recursive 
+.git
+.vscode
 
 # Environment variables
 .env

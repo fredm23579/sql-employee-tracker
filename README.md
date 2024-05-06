@@ -3,12 +3,12 @@
   <h1 align="center">SQL EMPLOYEE TRACKER</h1>
   <h3>Codebase for the SQL EMPLOYEE TRACKER platform</h3>
   <h3>◦ Developed with the software and tools below.</h3>
-  <p align="center"><img src="https://img.shields.io/badge/-Node.js-004E89?logo=Node.js&style=for-the-badge" alt='Node.js\' />
-<img src="https://via.placeholder.com/1/0000/00000000" alt="spacer" /><img src="https://img.shields.io/badge/-MySQL-004E89?logo=MySQL&style=for-the-badge" alt='MySQL\' />
-<img src="https://via.placeholder.com/1/0000/00000000" alt="spacer" /><img src="https://img.shields.io/badge/-Inquirer.js-004E89?logo=Inquirer.js&style=for-the-badge" alt='Inquirer.js\' />
-<img src="https://via.placeholder.com/1/0000/00000000" alt="spacer" /><img src="https://img.shields.io/badge/-dotenv-004E89?logo=dotenv&style=for-the-badge" alt='dotenv\' />
-<img src="https://via.placeholder.com/1/0000/00000000" alt="spacer" /><img src="https://img.shields.io/badge/-console.table-004E89?logo=console.table&style=for-the-badge" alt='console.table\' />
-<img src="https://via.placeholder.com/1/0000/00000000" alt="spacer" /><img src="https://img.shields.io/badge/-mysql2-004E89?logo=mysql2&style=for-the-badge" alt='mysql2"' />
+  <p align="center"><img src="https://img.shields.io/badge/-Node.js-004E89?logo=Node.js&style=social" alt='Node.js\' />
+<img src="https://via.placeholder.com/1/0000/00000000" alt="spacer" /><img src="https://img.shields.io/badge/-MySQL-004E89?logo=MySQL&style=social" alt='MySQL\' />
+<img src="https://via.placeholder.com/1/0000/00000000" alt="spacer" /><img src="https://img.shields.io/badge/-Inquirer.js-004E89?logo=Inquirer.js&style=social" alt='Inquirer.js\' />
+<img src="https://via.placeholder.com/1/0000/00000000" alt="spacer" /><img src="https://img.shields.io/badge/-Express.js-004E89?logo=Express.js&style=social" alt='Express.js\' />
+<img src="https://via.placeholder.com/1/0000/00000000" alt="spacer" /><img src="https://img.shields.io/badge/-dotenv-004E89?logo=dotenv&style=social" alt='dotenv\' />
+<img src="https://via.placeholder.com/1/0000/00000000" alt="spacer" /><img src="https://img.shields.io/badge/-figlet-004E89?logo=figlet&style=social" alt='figlet"' />
 <img src="https://via.placeholder.com/1/0000/00000000" alt="spacer" />
   </p>
   </div>
@@ -69,7 +69,7 @@
 
 | File | Summary |
 | ---- | ------- |
-| index.js |  The code is a command-line interface (CLI) application that allows users to interact with a database of employee data, including viewing departments, roles, and employees, adding new departments, roles, and employees, and updating employee roles. |
+| index.js |  The code is a command-line application that allows users to interact with a database of employees, departments, and roles. It provides a menu-driven interface for viewing, adding, updating, and deleting data, as well as exiting the application. |
 
 </details>
 
@@ -79,9 +79,9 @@
 
 | File | Summary |
 | ---- | ------- |
-| connection.js |  The code creates a connection pool for a MySQL database using the `mysql2` package and exports it as a promise. |
-| queries.js |  The code defines a module that provides functions for performing SQL queries on a database, including getting all departments, roles, and employees, adding new departments, roles, and employees, and updating employee roles. |
-| utils.js |  The code defines two functions, `promptUser` and `promptInput`, which use the `inquirer` library to prompt users for input in a list or input format, respectively. |
+| connection.js |  The code creates a connection pool for a MySQL database using the `mysql2` package, loads environment variables from a `.env` file, and exports the pool as a promise. |
+| queries.js |  The code defines a set of functions for interacting with a database, including retrieving data, adding new records, and updating existing ones. |
+| utils.js |  The code defines two functions, `promptUser` and `promptInput`, which use the `inquirer` package to prompt the user with a list of choices or for input, respectively. |
 
 </details>
 
@@ -91,9 +91,9 @@
 
 | File | Summary |
 | ---- | ------- |
-| department.js |  The code defines a module that exports functions to interact with a database using the `pool` connection. |
-| employee.js |  The code defines a module that exports functions to interact with a database using the `pool` constant, which is initialized with the `require()` function. |
-| role.js |  The code defines a module that exports functions to interact with a database using the `pool` connection. |
+| department.js |  The code defines a module that exports functions to interact with a database using the `pool` connection from the `../lib/connection` file. |
+| employee.js |  The code defines a module that exports functions to interact with a database using the `pool` connection. |
+| role.js |  The code defines a module that exports functions to interact with a database using the `pool` connection from the `../lib/connection` file. |
 
 </details>
 
@@ -108,9 +108,9 @@
 DB_USER=your_username
 DB_PASSWORD=your_password
 ```
-3. Start the application by running `npm start` in your terminal. This will launch the command-line interface and allow you to interact with the employee database.
-4. Use the menu options to view and manage departments, employees, and roles. For example, you can use the `View all departments` option to see a list of all departments in the company, or the `Add a department` option to create a new department.
-5. When you're finished, you can exit the application by typing `quit` at the prompt.
+3. Start the application by running `node index.js` in your terminal.
+4. Use the command-line interface to interact with the application and manage the employee database.
 
-That's it! With these steps, you should be able to get started with this Node.js project and start managing your company's employee database.
+Note: Before you start, make sure you have a MySQL server running on your local machine and that you have created the necessary database and tables using the schema and seed files in the `db` directory.
+
 
