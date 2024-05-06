@@ -16,16 +16,17 @@
   ---
   ## 📚 Table of Contents
   - [📚 Table of Contents](#-table-of-contents)
-  - [🔍 Overview](#-overview)
+  - [🔍 Description](#-description)
   - [🌟 Features](#-features)
   - [📁 Repository Structure](#-repository-structure)
+  - [💻 Demo Video](#-demo-video)
   - [💻 Code Summary](#-code-summary)
   - [🚀 Getting Started](#-getting-started)
   
   ---
   
   
-  ## 🔍 Overview
+  ## 🔍 Description
 
  This is a Node.js project with a MySQL database, consisting of a RESTful API for managing departments, employees, and roles in a company. The project includes a `db` directory with schema and seed files, as well as a `lib` directory with utility functions for connecting to the database and performing queries. The `models` directory contains JavaScript classes for each of the three entities, and the `index.js` file is the entry point for the application.
 
@@ -60,6 +61,11 @@
 └── README.md
 
 ```
+---
+
+## Demo Video
+
+- ![demo video](./demo.mp4)
 
 ---
 
