@@ -65,7 +65,7 @@
 
 ## Demo Video
 
-- ![demo video](https://drive.google.com/file/d/1kzjCWhborksz4Yp_1Lof7safywFpYE9N/view?usp=sharing)
+- [demo video](https://drive.google.com/file/d/1kzjCWhborksz4Yp_1Lof7safywFpYE9N/view?usp=sharing)
 
 ---
 
